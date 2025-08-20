@@ -1,4 +1,11 @@
-export {Home} from './Home.jsx'
-export {Contact} from './Contact.jsx'
-export {About} from './About.jsx'
-export {Projects} from './Projects.jsx'
+import Home from "./Home";
+import About from './About'
+import Projects from "./Projects";
+import Contact from "./Contact";
+
+export {
+    Home,
+    About,
+    Projects,
+    Contact
+}

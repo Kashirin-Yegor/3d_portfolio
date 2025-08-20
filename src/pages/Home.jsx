@@ -6,7 +6,7 @@ import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
 import { Bird, Island, Plane, Sky } from "../models";
 
-export const Home = () => {
+const Home = () => {
   const audioRef = useRef(new Audio(sakura));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
@@ -27,6 +27,8 @@ export const Home = () => {
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
+
+    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];
@@ -113,3 +115,5 @@ export const Home = () => {
     </section>
   );
 };
+
+export default Home;

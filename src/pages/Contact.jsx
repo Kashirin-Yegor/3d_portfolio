@@ -6,7 +6,7 @@ import { Fox } from "../models";
 import useAlert from "../hooks/useAlert";
 import { Alert, Loader } from "../components";
 
-export const Contact = () => {
+const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
@@ -31,7 +31,7 @@ export const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Kashirin Yegor",
+          to_name: "Yegor Kashirin",
           from_email: form.email,
           to_email: "kashirin.yegor@gmail.com",
           message: form.message,
@@ -169,3 +169,5 @@ export const Contact = () => {
     </section>
   );
 };
+
+export default Contact;
